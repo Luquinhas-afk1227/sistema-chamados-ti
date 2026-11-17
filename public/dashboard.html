@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Chamados — Helpdesk TI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="pagina-interna">
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <div class="topo-marca">
+        <h1>Helpdesk TI</h1>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="dashboard.html" class="nav-link ativo">Fila de Chamados</a>
+          <a href="novo-chamado.html" class="nav-link">Abrir Chamado</a>
+        </nav>
+      </div>
+
+      <div class="topo-usuario">
+        <div class="usuario-info">
+          <strong id="nome-usuario-logado">Técnico TI</strong>
+          <span id="cargo-usuario-logado">Suporte Técnico</span>
+        </div>
+        <button type="button" id="btn-sair" class="btn-sair">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Painel de Resumo -->
+    <section class="resumo-grid" aria-label="Resumo de chamados">
+      <div class="card-kpi">
+        <span class="kpi-titulo">Total de Chamados</span>
+        <strong id="kpi-total" class="kpi-valor">0</strong>
+      </div>
+      <div class="card-kpi kpi-aberto">
+        <span class="kpi-titulo">Abertos</span>
+        <strong id="kpi-abertos" class="kpi-valor">0</strong>
+      </div>
+      <div class="card-kpi kpi-andamento">
+        <span class="kpi-titulo">Em Andamento</span>
+        <strong id="kpi-andamento" class="kpi-valor">0</strong>
+      </div>
+      <div class="card-kpi kpi-resolvido">
+        <span class="kpi-titulo">Resolvidos</span>
+        <strong id="kpi-resolvidos" class="kpi-valor">0</strong>
+      </div>
+    </section>
+
+    <!-- Lista e Filtros de Chamados -->
+    <section class="painel-lista">
+      <div class="cabecalho-lista">
+        <div>
+          <h2>Fila de Atendimento</h2>
+          <p class="subtitulo-secao">Acompanhe, filtre e atualize o status dos chamados ativos.</p>
+        </div>
+
+        <div class="acoes-cabecalho">
+          <div class="filtros">
+            <select id="filtro-status" aria-label="Filtrar por status">
+              <option value="Todos">Status: Todos</option>
+              <option value="Aberto">Aberto</option>
+              <option value="Em Andamento">Em Andamento</option>
+              <option value="Resolvido">Resolvido</option>
+            </select>
+
+            <select id="filtro-prioridade" aria-label="Filtrar por prioridade">
+              <option value="Todas">Prioridade: Todas</option>
+              <option value="Baixa">Baixa</option>
+              <option value="Média">Média</option>
+              <option value="Alta">Alta</option>
+              <option value="Crítica">Crítica</option>
+            </select>
+          </div>
+
+          <a href="novo-chamado.html" class="btn-novo">+ Novo Chamado</a>
+        </div>
+      </div>
+
+      <div id="lista-chamados" class="lista-cards">
+        <!-- Os chamados são carregados dinamicamente aqui -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Helpdesk TI — Sistema de Gestão de Chamados de Suporte Técnico</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

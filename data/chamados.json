@@ -1,0 +1,35 @@
+[
+  {
+    "id": "CH-1001",
+    "solicitante": "Mariana Costa (Financeiro)",
+    "titulo": "Sem acesso à pasta compartilhada de notas fiscais",
+    "categoria": "Software / Acesso",
+    "prioridade": "Alta",
+    "descricao": "Ao tentar abrir o diretório da rede aparece erro de permissão negada desde hoje cedo.",
+    "status": "Aberto",
+    "criadoEm": "2026-11-17T06:52:20.734Z",
+    "atualizadoEm": "2026-11-17T09:08:48.808Z"
+  },
+  {
+    "id": "CH-1002",
+    "solicitante": "Carlos Eduardo (Recepção)",
+    "titulo": "Ponto de rede sem conexão no guichê 2",
+    "categoria": "Rede / Internet",
+    "prioridade": "Crítica",
+    "descricao": "Computador indica cabo de rede desconectado mesmo após trocar o patch cord.",
+    "status": "Em Andamento",
+    "criadoEm": "2026-11-17T07:52:20.735Z",
+    "atualizadoEm": "2026-11-17T08:22:20.735Z"
+  },
+  {
+    "id": "CH-1003",
+    "solicitante": "Fernanda Lima (RH)",
+    "titulo": "Instalação de segundo monitor na estação",
+    "categoria": "Hardware",
+    "prioridade": "Baixa",
+    "descricao": "Solicitação de cabo HDMI e configuração de tela estendida.",
+    "status": "Resolvido",
+    "criadoEm": "2026-11-16T08:52:20.735Z",
+    "atualizadoEm": "2026-11-16T20:52:20.735Z"
+  }
+]

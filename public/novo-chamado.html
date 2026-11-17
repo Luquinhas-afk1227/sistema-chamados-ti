@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abrir Novo Chamado — Helpdesk TI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="pagina-interna">
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <div class="topo-marca">
+        <h1>Helpdesk TI</h1>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="dashboard.html" class="nav-link">Fila de Chamados</a>
+          <a href="novo-chamado.html" class="nav-link ativo">Abrir Chamado</a>
+        </nav>
+      </div>
+
+      <div class="topo-usuario">
+        <div class="usuario-info">
+          <strong id="nome-usuario-logado">Técnico TI</strong>
+          <span id="cargo-usuario-logado">Suporte Técnico</span>
+        </div>
+        <button type="button" id="btn-sair" class="btn-sair">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="layout-novo-chamado">
+      <!-- Formulário Principal -->
+      <section class="painel-formulario">
+        <div class="cabecalho-form">
+          <h2>Abrir Novo Chamado</h2>
+          <p class="subtitulo-secao">Preencha os dados do incidente para gerar um protocolo na fila de suporte.</p>
+        </div>
+
+        <form id="form-chamado">
+          <div class="campo">
+            <label for="solicitante">Solicitante / Setor *</label>
+            <input
+              type="text"
+              id="solicitante"
+              placeholder="Ex: Lucas Nogueira (Suporte TI)"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="titulo">Assunto do Problema *</label>
+            <input
+              type="text"
+              id="titulo"
+              placeholder="Ex: Sem acesso à pasta compartilhada"
+              required
+            />
+          </div>
+
+          <div class="linha-dupla">
+            <div class="campo">
+              <label for="categoria">Categoria *</label>
+              <select id="categoria" required>
+                <option value="Hardware">Hardware</option>
+                <option value="Software / Acesso">Software / Acesso</option>
+                <option value="Rede / Internet">Rede / Internet</option>
+                <option value="Impressoras">Impressoras</option>
+                <option value="Outros">Outros</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="prioridade">Prioridade *</label>
+              <select id="prioridade" required>
+                <option value="Baixa">Baixa</option>
+                <option value="Média" selected>Média</option>
+                <option value="Alta">Alta</option>
+                <option value="Crítica">Crítica</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="descricao">Descrição Detalhada *</label>
+            <textarea
+              id="descricao"
+              rows="5"
+              placeholder="Descreva o erro apresentado, equipamento afetado ou testes já realizados..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="botoes-form">
+            <a href="dashboard.html" class="btn-cancelar">Voltar para Fila</a>
+            <button type="submit" class="btn-primario">Registrar Chamado</button>
+          </div>
+
+          <p id="mensagem-form" class="mensagem-feedback" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <!-- Painel Lateral de Orientação (SLA) -->
+      <aside class="painel-sla">
+        <h3>Guia de Classificação (SLA)</h3>
+        <p class="sla-intro">Escolha a prioridade adequada ao impacto operacional:</p>
+
+        <ul class="lista-sla">
+          <li>
+            <span class="badge badge-prioridade-critica">Crítica</span>
+            <p>Parada total de setor, servidor ou rede principal sem contingência. <strong>Meta: 1h</strong>.</p>
+          </li>
+          <li>
+            <span class="badge badge-prioridade-alta">Alta</span>
+            <p>Falha grave em estação ou sistema essencial impedindo o trabalho do usuário. <strong>Meta: 4h</strong>.</p>
+          </li>
+          <li>
+            <span class="badge badge-prioridade-media">Média</span>
+            <p>Instabilidade parcial ou solicitação de acesso/configuração padrão. <strong>Meta: 12h</strong>.</p>
+          </li>
+          <li>
+            <span class="badge badge-prioridade-baixa">Baixa</span>
+            <p>Dúvidas gerais, melhorias ou instalação de periféricos secundários. <strong>Meta: 24h</strong>.</p>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Helpdesk TI — Sistema de Gestão de Chamados de Suporte Técnico</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
